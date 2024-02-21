@@ -10,6 +10,10 @@
 		963042E62B6A739C008D6F5A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963042E52B6A739C008D6F5A /* main.swift */; };
 		963042ED2B6A74F3008D6F5A /* TokenStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963042EC2B6A74F3008D6F5A /* TokenStateType.swift */; };
 		963042EF2B6A75DE008D6F5A /* DfaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963042EE2B6A75DE008D6F5A /* DfaState.swift */; };
+		96A0D0EA2B834CA500E1DB02 /* ASTNodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0D0E92B834CA500E1DB02 /* ASTNodeType.swift */; };
+		96A0D0EC2B83543600E1DB02 /* SimpleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0D0EB2B83543600E1DB02 /* SimpleCalculator.swift */; };
+		96B0301C2B74C06800E4A496 /* ASTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0301B2B74C06800E4A496 /* ASTNode.swift */; };
+		96E770E52B844100009E6345 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E770E42B844100009E6345 /* CustomError.swift */; };
 		96FFDC5C2B6B47CF005029CF /* SimpleTokenReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC5B2B6B47CF005029CF /* SimpleTokenReader.swift */; };
 		96FFDC5E2B6B480E005029CF /* TokenReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC5D2B6B480E005029CF /* TokenReader.swift */; };
 		96FFDC602B6B490B005029CF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC5F2B6B490B005029CF /* Token.swift */; };
@@ -34,6 +38,10 @@
 		963042E52B6A739C008D6F5A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		963042EC2B6A74F3008D6F5A /* TokenStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStateType.swift; sourceTree = "<group>"; };
 		963042EE2B6A75DE008D6F5A /* DfaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfaState.swift; sourceTree = "<group>"; };
+		96A0D0E92B834CA500E1DB02 /* ASTNodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTNodeType.swift; sourceTree = "<group>"; };
+		96A0D0EB2B83543600E1DB02 /* SimpleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalculator.swift; sourceTree = "<group>"; };
+		96B0301B2B74C06800E4A496 /* ASTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTNode.swift; sourceTree = "<group>"; };
+		96E770E42B844100009E6345 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		96FFDC5B2B6B47CF005029CF /* SimpleTokenReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTokenReader.swift; sourceTree = "<group>"; };
 		96FFDC5D2B6B480E005029CF /* TokenReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReader.swift; sourceTree = "<group>"; };
 		96FFDC5F2B6B490B005029CF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -79,6 +87,10 @@
 				96FFDC5F2B6B490B005029CF /* Token.swift */,
 				96FFDC612B6B6EDB005029CF /* SimpleLexer.swift */,
 				96FFDC632B6B6F55005029CF /* SimpleToken.swift */,
+				96B0301B2B74C06800E4A496 /* ASTNode.swift */,
+				96A0D0E92B834CA500E1DB02 /* ASTNodeType.swift */,
+				96A0D0EB2B83543600E1DB02 /* SimpleCalculator.swift */,
+				96E770E42B844100009E6345 /* CustomError.swift */,
 			);
 			path = TokenAnalize;
 			sourceTree = "<group>";
@@ -143,7 +155,11 @@
 			files = (
 				96FFDC5C2B6B47CF005029CF /* SimpleTokenReader.swift in Sources */,
 				963042EF2B6A75DE008D6F5A /* DfaState.swift in Sources */,
+				96A0D0EC2B83543600E1DB02 /* SimpleCalculator.swift in Sources */,
 				963042E62B6A739C008D6F5A /* main.swift in Sources */,
+				96B0301C2B74C06800E4A496 /* ASTNode.swift in Sources */,
+				96E770E52B844100009E6345 /* CustomError.swift in Sources */,
+				96A0D0EA2B834CA500E1DB02 /* ASTNodeType.swift in Sources */,
 				96FFDC602B6B490B005029CF /* Token.swift in Sources */,
 				96FFDC5E2B6B480E005029CF /* TokenReader.swift in Sources */,
 				963042ED2B6A74F3008D6F5A /* TokenStateType.swift in Sources */,

@@ -3,7 +3,7 @@
 //  TokenAnalize
 //
 //  Created by Jason Li on 2024/1/31.
-//
+//  以下代码参照极客时间 宫文学老师的编译原理之美课程改写成swift实现
 
 import Foundation
 
@@ -25,3 +25,9 @@ print("===========")
 let code3 = "var a : Int = 7 * 16"
 let tokenReader3 = lexer.tokenize(code: code3)
 lexer.dump(tokenReader: tokenReader3)
+
+
+print("===========")
+let code4 = "(2+5)/2+16/2-3*6"
+let calculator = SimpleCalculator(script: code4)
+calculator.evaluate()

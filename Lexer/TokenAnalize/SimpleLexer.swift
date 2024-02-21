@@ -3,7 +3,7 @@
 //  TokenAnalize
 //
 //  Created by Jason Li on 2024/2/1.
-//
+//  以下代码参照极客时间 宫文学老师的编译原理之美课程改写成swift实现
 
 import Foundation
 
@@ -102,6 +102,14 @@ class SimpleLexer {
             newState = DfaState.colon
             token.tokenType = TokenType.colon
             tokenText.append(char)
+        } else if char == "(" {
+            newState = DfaState.leftParen
+            token.tokenType = TokenType.leftParen
+            tokenText.append(char)
+        } else if char == ")" {
+            newState = DfaState.rightParen
+            token.tokenType = TokenType.rightParen
+            tokenText.append(char)
         }
         
         return newState
@@ -138,7 +146,7 @@ class SimpleLexer {
                 } else {
                     state = createToken(char: str)
                 }
-            case .GE, .plus, .minus, .multiply, .divide, .assignment, .colon:
+            case .GE, .plus, .minus, .multiply, .divide, .assignment, .colon, .leftParen, .rightParen:
                 state = createToken(char: str)
             case .intLiteral:
                 if isDigital(char: str) {
