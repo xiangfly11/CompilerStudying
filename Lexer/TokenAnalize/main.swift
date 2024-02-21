@@ -9,6 +9,7 @@ import Foundation
 
 //print("Hello, World!")
 
+/*
 let lexer = SimpleLexer()
 
 let code1 = "age33_87iduvl >= 45"
@@ -25,9 +26,9 @@ print("===========")
 let code3 = "var a : Int = 7 * 16"
 let tokenReader3 = lexer.tokenize(code: code3)
 lexer.dump(tokenReader: tokenReader3)
-
+*/
 
 print("===========")
-let code4 = "(2+5)/2+16/2-3*6"
+let code4 = "2+3+4+5"
 let calculator = SimpleCalculator(script: code4)
 calculator.evaluate()
