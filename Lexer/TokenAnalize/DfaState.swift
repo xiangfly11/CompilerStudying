@@ -16,6 +16,7 @@ enum DfaState {
     case GT; // >
     case GE; // >=
     case intLiteral; //整型字面量
+    case doubleLiteral; //小数字面量
     case assignment; // =
     case plus; // +
     case minus; // -

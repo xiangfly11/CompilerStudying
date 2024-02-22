@@ -14,12 +14,11 @@ class SimpleLexer {
 
     
     func isAlpha(char: String) -> Bool {
-//        let regex = /[a-zA-Z_]([a-zA-Z_] | [0-9])*/
         let regex = /[a-zA-Z_]+/
         
         let result = char.matches(of: regex)
         
-        return result.count > 0
+        return result.count == char.count
     }
     
     func isDigital(char: String) -> Bool {
@@ -27,7 +26,7 @@ class SimpleLexer {
         
         let result = char.matches(of: regex)
         
-        return result.count > 0
+        return result.count == char.count
     }
     
     func isBlank(char: String) -> Bool {
@@ -35,7 +34,7 @@ class SimpleLexer {
         
         let result = char.matches(of: regex)
         
-        return result.count > 0
+        return result.count == char.count
     }
     
     /**
@@ -151,6 +150,16 @@ class SimpleLexer {
             case .intLiteral:
                 if isDigital(char: str) {
                     tokenText.append(str)
+                } else if str == "." {
+                    state = .doubleLiteral
+                    tokenText.append(str)
+                } else {
+                    state = createToken(char: str)
+                }
+            case .doubleLiteral:
+                if isDigital(char: str) {
+                    tokenText.append(str)
+                    token.tokenType = .DoubleLiteral
                 } else {
                     state = createToken(char: str)
                 }

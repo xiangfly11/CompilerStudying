@@ -32,7 +32,7 @@ class SimpleCalculator {
         do {
             let tree = try parse()
             dumpAST(node: tree, indent: "")
-            let result = try intCalculate(node: tree, indent: "")
+            let result = try calculate(node: tree, indent: "")
             
             print("The result is: \(result)")
         } catch let error  {
@@ -107,7 +107,7 @@ class SimpleCalculator {
         var child1 = try multiplicative(tokens)  // 应用 add 规则
         var node = child1
         
-        if let c1 = child1 {
+        if let _ = child1 {
             while true {    // 循环应用 add'
                 var token = tokens.peek()
                 if let t = token, t.tokenType == TokenType.plus || t.tokenType == TokenType.minus {
@@ -167,7 +167,7 @@ class SimpleCalculator {
         var node: ASTNode?
         var token = tokens.peek()
         if let t = token {
-            if t.tokenType == TokenType.IntLiteral {
+            if t.tokenType == TokenType.IntLiteral || t.tokenType == TokenType.DoubleLiteral {
                 token = tokens.read()
                 node = SimpleASTNode(text: t.text, nodeType: ASTNodeType.IntLiteral)
             } else if t.tokenType == TokenType.identifier {
@@ -192,15 +192,15 @@ class SimpleCalculator {
         return node
     }
     
-    func intCalculate(node: ASTNode, indent: String) throws -> Int {
-        var result = 0
+    func calculate(node: ASTNode, indent: String) throws -> Double {
+        var result: Double = 0
         print("\(indent) Calculating: \(node.getType() ?? ASTNodeType.Program)")
         
         switch node.getType() {
         case .Program:
             try node.getChildren().forEach({[weak self] (node) in
                 guard let self = self else { throw CustomError.failed("Self not exist") }
-                result = try self.intCalculate(node: node, indent: indent + "\t")
+                result = try self.calculate(node: node, indent: indent + "\t")
             })
         case .IntDeclaration:
             break
@@ -211,15 +211,15 @@ class SimpleCalculator {
         case .Primary:
             break
         case .Multipliative:
-            var value1: Int = 0
-            var value2: Int = 0
+            var value1: Double = 0
+            var value2: Double = 0
             if let child1 = node.getChildren().first {
-                value1 = try intCalculate(node: child1, indent: indent + "\t")
+                value1 = try calculate(node: child1, indent: indent + "\t")
             }
             
             if node.getChildren().count > 1 {
                 let child2 = node.getChildren()[1]
-                value2 = try intCalculate(node: child2, indent: indent + "\t")
+                value2 = try calculate(node: child2, indent: indent + "\t")
             }
             if node.getText() == "*" {
                 result = value1 * value2
@@ -228,15 +228,15 @@ class SimpleCalculator {
             }
             
         case .Additive:
-            var value1: Int = 0
-            var value2: Int = 0
+            var value1: Double = 0
+            var value2: Double = 0
             if let child1 = node.getChildren().first {
-                value1 = try intCalculate(node: child1, indent: indent + "\t")
+                value1 = try calculate(node: child1, indent: indent + "\t")
             }
             
             if node.getChildren().count > 1 {
                 let child2 = node.getChildren()[1]
-                value2 = try intCalculate(node: child2, indent: indent + "\t")
+                value2 = try calculate(node: child2, indent: indent + "\t")
             }
             if node.getText() == "+" {
                 result = value1 + value2
@@ -247,8 +247,8 @@ class SimpleCalculator {
         case .Identifier:
             break
         case .IntLiteral:
-            if let intValue =  Int(node.getText()) {
-                return intValue
+            if let value =  Double(node.getText()) {
+                return value
             }
             
             throw CustomError.failed("The text is not a valied Int value")
