@@ -229,6 +229,15 @@ class SimpleCalculator {
         return node
     }
     
+    
+    /// 计算AST tree的最终结果
+    /// 通过递归深度优先遍历，遍历树中的每个节点，最终到达叶子结点为止
+    /// 当到达叶子结点时，返回叶子结点的值，并计算每个非叶子结点的值
+    /// 最终返回整棵树的值
+    /// - Parameters:
+    ///   - node: 树的根节点
+    ///   - indent: 打印附加信息
+    /// - Returns: 返回整棵树的值
     func calculate(node: ASTNode, indent: String) throws -> Double {
         var result: Double = 0
         print("\(indent) Calculating: \(node.getType() ?? ASTNodeType.Program)")
@@ -296,6 +305,11 @@ class SimpleCalculator {
         return result
     }
     
+    
+    /// 打印树中每个节点的信息
+    /// - Parameters:
+    ///   - node: 树的根节点
+    ///   - indent: 打印附加信息
     func dumpAST(node: ASTNode, indent: String) {
         print("\(indent)\(node.getType() ?? ASTNodeType.Program)    \(node.getText())")
         
