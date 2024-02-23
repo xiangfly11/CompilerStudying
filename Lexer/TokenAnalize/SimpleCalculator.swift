@@ -15,6 +15,8 @@ import Foundation
 /// 递归项在右边，会自然的对应右结合。我们真正需要的是左结合。
 /// 使用additiveImprove(_ tokens:)函数，可以解决结合性的问题。因为它使用了下面的语法规则：
 /// add -> mul (+ mul)*
+/// 使用mulitplicativeImprove(_ tokens:)函数，可以解决结合性问题。因为它使用了下面的语法规则:
+/// multiplicative -> primary (* primary)*
 
 class SimpleCalculator {
     var script: String
