@@ -28,13 +28,13 @@ let tokenReader3 = lexer.tokenize(code: code3)
 lexer.dump(tokenReader: tokenReader3)
 */
 
-print("===========")
-let lexer = SimpleLexer()
-let code3 = "8a 98765.987054 7.9a"
-let tokenReader3 = lexer.tokenize(code: code3)
-lexer.dump(tokenReader: tokenReader3)
+//print("===========")
+//let lexer = SimpleLexer()
+//let code3 = "8a 98765.987054 7.9a"
+//let tokenReader3 = lexer.tokenize(code: code3)
+//lexer.dump(tokenReader: tokenReader3)
 
 print("===========")
-let code4 = "2.8+3+4+5"
+let code4 = "3*(3+5)*2"
 let calculator = SimpleCalculator(script: code4)
 calculator.evaluate()

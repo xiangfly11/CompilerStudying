@@ -99,12 +99,14 @@ class SimpleCalculator {
     
     
     /// 语法解析: 加法表达式，这个方法解决了加法结合律问题
+    /// 同时通过while循环，不再产生尾递归，优化了效率
     /// add -> mul add'
     /// add' -> + mul add' | ε
+    ///  最终推出 add -> mul (+ mul)*
     /// - Parameter tokens: TokenReader
     /// - Returns: 返回加法表达式节点
     func additiveImprove(_ tokens: TokenReader) throws -> ASTNode? {
-        var child1 = try multiplicative(tokens)  // 应用 add 规则
+        var child1 = try mulitplicativeImprove(tokens)  // 应用 add 规则
         var node = child1
         
         if let _ = child1 {
@@ -112,7 +114,7 @@ class SimpleCalculator {
                 var token = tokens.peek()
                 if let t = token, t.tokenType == TokenType.plus || t.tokenType == TokenType.minus {
                     token = tokens.read()
-                    if let child2 = try multiplicative(tokens) {  // 计算下级节点
+                    if let child2 = try mulitplicativeImprove(tokens) {  // 计算下级节点
                         node = SimpleASTNode(text: t.text, nodeType: ASTNodeType.Additive)
                         node?.addChild(child: child1!)  // 注意，新节点在顶层，保证正确的结合性
                         node?.addChild(child: child2)
@@ -158,6 +160,39 @@ class SimpleCalculator {
         return node
     }
     
+    /// 语法解析: 乘法表达式,  这个方法解决了乘法结合率的问题
+    ///  同时通过while循环，不再产生尾递归，优化了效率
+    ///  multiplicative -> primary multiplicative'
+    ///  multiplicative' -> primary * mulitplicative'
+    ///  最终推出: multiplicative -> primary (* primary)*
+    /// - Parameter tokens: TokenReader
+    /// - Returns: 返回乘法表达式节点
+    func mulitplicativeImprove(_ tokens: TokenReader) throws -> ASTNode? {
+        var child1 = try primary(tokens)
+        var node = child1
+        
+        if let _ = child1 {
+            while true {
+                var token = tokens.peek()
+                if let t = token, t.tokenType == TokenType.multiply || t.tokenType == TokenType.divide {
+                    token = tokens.read()
+                    if let child2 = try primary(tokens) {  // 计算下级节点
+                        node = SimpleASTNode(text: t.text, nodeType: ASTNodeType.Multipliative)
+                        node?.addChild(child: child1!)  // 注意，新节点在顶层，保证正确的结合性
+                        node?.addChild(child: child2)
+                        child1 = node
+                    } else {
+                        break
+                    }
+                } else {
+                    break
+                }
+            }
+        }
+        
+        return node
+    }
+ 
     
     /// 语法解析: 基础表达式
     /// - Parameter tokens: TokenRader
