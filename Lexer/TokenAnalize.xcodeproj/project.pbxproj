@@ -12,6 +12,7 @@
 		963042EF2B6A75DE008D6F5A /* DfaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963042EE2B6A75DE008D6F5A /* DfaState.swift */; };
 		96A0D0EA2B834CA500E1DB02 /* ASTNodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0D0E92B834CA500E1DB02 /* ASTNodeType.swift */; };
 		96A0D0EC2B83543600E1DB02 /* SimpleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0D0EB2B83543600E1DB02 /* SimpleCalculator.swift */; };
+		96AFCB6A2B88CB4A0001FDBD /* SimpleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AFCB692B88CB4A0001FDBD /* SimpleParser.swift */; };
 		96B0301C2B74C06800E4A496 /* ASTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0301B2B74C06800E4A496 /* ASTNode.swift */; };
 		96E770E52B844100009E6345 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E770E42B844100009E6345 /* CustomError.swift */; };
 		96FFDC5C2B6B47CF005029CF /* SimpleTokenReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFDC5B2B6B47CF005029CF /* SimpleTokenReader.swift */; };
@@ -40,6 +41,7 @@
 		963042EE2B6A75DE008D6F5A /* DfaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfaState.swift; sourceTree = "<group>"; };
 		96A0D0E92B834CA500E1DB02 /* ASTNodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTNodeType.swift; sourceTree = "<group>"; };
 		96A0D0EB2B83543600E1DB02 /* SimpleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalculator.swift; sourceTree = "<group>"; };
+		96AFCB692B88CB4A0001FDBD /* SimpleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleParser.swift; sourceTree = "<group>"; };
 		96B0301B2B74C06800E4A496 /* ASTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTNode.swift; sourceTree = "<group>"; };
 		96E770E42B844100009E6345 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		96FFDC5B2B6B47CF005029CF /* SimpleTokenReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTokenReader.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				96A0D0E92B834CA500E1DB02 /* ASTNodeType.swift */,
 				96A0D0EB2B83543600E1DB02 /* SimpleCalculator.swift */,
 				96E770E42B844100009E6345 /* CustomError.swift */,
+				96AFCB692B88CB4A0001FDBD /* SimpleParser.swift */,
 			);
 			path = TokenAnalize;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				963042EF2B6A75DE008D6F5A /* DfaState.swift in Sources */,
 				96A0D0EC2B83543600E1DB02 /* SimpleCalculator.swift in Sources */,
 				963042E62B6A739C008D6F5A /* main.swift in Sources */,
+				96AFCB6A2B88CB4A0001FDBD /* SimpleParser.swift in Sources */,
 				96B0301C2B74C06800E4A496 /* ASTNode.swift in Sources */,
 				96E770E52B844100009E6345 /* CustomError.swift in Sources */,
 				96A0D0EA2B834CA500E1DB02 /* ASTNodeType.swift in Sources */,

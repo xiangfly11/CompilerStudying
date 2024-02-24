@@ -27,4 +27,5 @@ enum TokenType {
     case colon; //冒号:
     case leftParen; //(
     case rightParen; //)
+    case SemiColon; //;
 }

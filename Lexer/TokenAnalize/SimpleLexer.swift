@@ -109,6 +109,10 @@ class SimpleLexer {
             newState = DfaState.rightParen
             token.tokenType = TokenType.rightParen
             tokenText.append(char)
+        } else if char == ";" {
+            newState = DfaState.semiColon
+            token.tokenType = TokenType.SemiColon
+            tokenText.append(char)
         }
         
         return newState
@@ -145,7 +149,7 @@ class SimpleLexer {
                 } else {
                     state = createToken(char: str)
                 }
-            case .GE, .plus, .minus, .multiply, .divide, .assignment, .colon, .leftParen, .rightParen:
+            case .GE, .plus, .minus, .multiply, .divide, .assignment, .colon, .leftParen, .rightParen, .semiColon:
                 state = createToken(char: str)
             case .intLiteral:
                 if isDigital(char: str) {

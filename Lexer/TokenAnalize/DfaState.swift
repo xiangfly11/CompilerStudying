@@ -34,4 +34,5 @@ enum DfaState {
     case colon; // 冒号:
     case leftParen; //(
     case rightParen; //)
+    case semiColon; //;
 }
