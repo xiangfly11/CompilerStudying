@@ -34,7 +34,10 @@ lexer.dump(tokenReader: tokenReader3)
 //let tokenReader3 = lexer.tokenize(code: code3)
 //lexer.dump(tokenReader: tokenReader3)
 
-print("===========")
-let code4 = "3*(3+5)*2"
-let calculator = SimpleCalculator(script: code4)
-calculator.evaluate()
+//print("===========")
+//let code4 = "3*(3+5)*2"
+//let calculator = SimpleCalculator(script: code4)
+//calculator.evaluate()
+
+let script = SimpleScript()
+SimpleScript().read()

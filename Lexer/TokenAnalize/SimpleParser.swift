@@ -76,11 +76,12 @@ class SimpleParser {
                 tokens.read()
                 
                 if let token = tokens.peek(), token.tokenType == .assignment {
+                    tokens.read()
                     if let child = try additiveImprove(tokens) {
                         node?.addChild(child: child)
+                    } else {
+                        throw CustomError.failed("Int declaration invalid, no correct right pattern")
                     }
-                } else {
-                    throw CustomError.failed("Int declaration invalid, no correct right pattern")
                 }
             } else {
                 throw CustomError.failed("Int declaration invalid, no identifier")
@@ -141,12 +142,14 @@ class SimpleParser {
         //所以需要知道在匹配钱tokens所处位置
         //如果匹配失败，将tokens重新设置回之前的位置
         let position = tokens.getPosition()
-        let node = try additiveImprove(tokens)
+        var node = try additiveImprove(tokens)
         if let _ = node {
             if let token = tokens.peek(), token.tokenType == .SemiColon {
                 tokens.read()
             } else {
-                throw CustomError.failed("Invalide expression statement, no semicolon.")
+                node = nil
+                //回溯
+                tokens.setPosition(index: position)
             }
         } else {
             //回溯
