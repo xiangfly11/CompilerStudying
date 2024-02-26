@@ -107,9 +107,10 @@ class SimpleParser {
     func assignmentExp(_ tokens: TokenReader) throws -> ASTNode? {
         var node: SimpleASTNode?
         if let token = tokens.peek(), token.tokenType == .identifier {
+            let tokenText = token.text
             tokens.read()
             if let token = tokens.peek(), token.tokenType == .assignment {
-                node = SimpleASTNode(text: token.text, nodeType: .AssignmentStmt)
+                node = SimpleASTNode(text: tokenText, nodeType: .AssignmentStmt)
                 tokens.read()
                 if let child = try additiveImprove(tokens) {
                     node?.addChild(child: child)
