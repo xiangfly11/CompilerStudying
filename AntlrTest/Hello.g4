@@ -6,8 +6,18 @@ Int :              'int';
  
 // 字面量
 IntLiteral:        [0-9]+;
-StringLiteral:      '"' .*? '"' ;  // 字符串字面量
+StringLiteral:      '"' (~["\\\r\n] | EscapeSequence)* '"';  // 字符串字面量
+
+fragment EscapeSequence
+    : '\\' [btnfr"'\\]
+    | '\\' ([0-3]? [0-7])? [0-7]
+    | '\\' 'u'+ HexDigit HexDigit HexDigit HexDigit
+    ;
  
+fragment HexDigit
+    : [0-9a-fA-F]
+    ;  
+    
 // 操作符
 AssignmentOP:       '=' ;    
 RelationalOP:       '>'|'>='|'<' |'<=' ;    
