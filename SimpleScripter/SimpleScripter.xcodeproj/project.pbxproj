@@ -10,8 +10,13 @@
 		967721F02BA5EAFE00282554 /* SimpleScriptCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967721EF2BA5EAFE00282554 /* SimpleScriptCompiler.swift */; };
 		967721F32BA5EBFE00282554 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967721F22BA5EBFE00282554 /* StringExt.swift */; };
 		96A8CB562BA69786002FDF72 /* Antlr4 in Frameworks */ = {isa = PBXBuildFile; productRef = 96A8CB552BA69786002FDF72 /* Antlr4 */; };
-		96A8CB572BA697AC002FDF72 /* PlayScriptLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1E97D2BA5D07B007DD5EB /* PlayScriptLexer.swift */; };
 		96A8CB5A2BA6A355002FDF72 /* Antlr4 in Frameworks */ = {isa = PBXBuildFile; productRef = 96A8CB592BA6A355002FDF72 /* Antlr4 */; };
+		96A8CB692BA6A4D1002FDF72 /* PlayScriptListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8CB602BA6A4D1002FDF72 /* PlayScriptListener.swift */; };
+		96A8CB6A2BA6A4D1002FDF72 /* PlayScriptBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8CB622BA6A4D1002FDF72 /* PlayScriptBaseListener.swift */; };
+		96A8CB6B2BA6A4D1002FDF72 /* PlayScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8CB632BA6A4D1002FDF72 /* PlayScriptParser.swift */; };
+		96A8CB6C2BA6A4D1002FDF72 /* PlayScriptLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8CB662BA6A4D1002FDF72 /* PlayScriptLexer.swift */; };
+		96A8CB6D2BA6A4D1002FDF72 /* PlayScriptBaseVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8CB672BA6A4D1002FDF72 /* PlayScriptBaseVisitor.swift */; };
+		96A8CB6E2BA6A4D1002FDF72 /* PlayScriptVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8CB682BA6A4D1002FDF72 /* PlayScriptVisitor.swift */; };
 		96B1E96A2BA5BF9C007DD5EB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1E9692BA5BF9C007DD5EB /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,20 +45,20 @@
 /* Begin PBXFileReference section */
 		967721EF2BA5EAFE00282554 /* SimpleScriptCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleScriptCompiler.swift; sourceTree = "<group>"; };
 		967721F22BA5EBFE00282554 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		96A8CB5C2BA6A4D1002FDF72 /* PlayScript.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayScript.g4; sourceTree = "<group>"; };
+		96A8CB5D2BA6A4D1002FDF72 /* CommonLexer.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommonLexer.g4; sourceTree = "<group>"; };
+		96A8CB5F2BA6A4D1002FDF72 /* PlayScript.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayScript.interp; sourceTree = "<group>"; };
+		96A8CB602BA6A4D1002FDF72 /* PlayScriptListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScriptListener.swift; sourceTree = "<group>"; };
+		96A8CB612BA6A4D1002FDF72 /* PlayScriptLexer.interp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayScriptLexer.interp; sourceTree = "<group>"; };
+		96A8CB622BA6A4D1002FDF72 /* PlayScriptBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScriptBaseListener.swift; sourceTree = "<group>"; };
+		96A8CB632BA6A4D1002FDF72 /* PlayScriptParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScriptParser.swift; sourceTree = "<group>"; };
+		96A8CB642BA6A4D1002FDF72 /* PlayScriptLexer.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayScriptLexer.tokens; sourceTree = "<group>"; };
+		96A8CB652BA6A4D1002FDF72 /* PlayScript.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayScript.tokens; sourceTree = "<group>"; };
+		96A8CB662BA6A4D1002FDF72 /* PlayScriptLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScriptLexer.swift; sourceTree = "<group>"; };
+		96A8CB672BA6A4D1002FDF72 /* PlayScriptBaseVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScriptBaseVisitor.swift; sourceTree = "<group>"; };
+		96A8CB682BA6A4D1002FDF72 /* PlayScriptVisitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScriptVisitor.swift; sourceTree = "<group>"; };
 		96B1E9662BA5BF9C007DD5EB /* SimpleScripter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleScripter; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1E9692BA5BF9C007DD5EB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		96B1E9732BA5D01B007DD5EB /* CommonLexer.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; name = CommonLexer.g4; path = ../../../AntlrScript/CommonLexer.g4; sourceTree = "<group>"; };
-		96B1E9742BA5D028007DD5EB /* PlayScript.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlayScript.g4; path = ../../../AntlrScript/PlayScript.g4; sourceTree = "<group>"; };
-		96B1E9762BA5D07B007DD5EB /* PlayScript.interp */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScript.interp; sourceTree = "<group>"; };
-		96B1E9772BA5D07B007DD5EB /* PlayScriptListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptListener.swift; sourceTree = "<group>"; };
-		96B1E9782BA5D07B007DD5EB /* PlayScriptLexer.interp */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScriptLexer.interp; sourceTree = "<group>"; };
-		96B1E9792BA5D07B007DD5EB /* PlayScriptBaseListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptBaseListener.swift; sourceTree = "<group>"; };
-		96B1E97A2BA5D07B007DD5EB /* PlayScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptParser.swift; sourceTree = "<group>"; };
-		96B1E97B2BA5D07B007DD5EB /* PlayScriptLexer.tokens */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScriptLexer.tokens; sourceTree = "<group>"; };
-		96B1E97C2BA5D07B007DD5EB /* PlayScript.tokens */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScript.tokens; sourceTree = "<group>"; };
-		96B1E97D2BA5D07B007DD5EB /* PlayScriptLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptLexer.swift; sourceTree = "<group>"; };
-		96B1E97E2BA5D07B007DD5EB /* PlayScriptBaseVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptBaseVisitor.swift; sourceTree = "<group>"; };
-		96B1E97F2BA5D07B007DD5EB /* PlayScriptVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptVisitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +81,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		96A8CB5B2BA6A4D1002FDF72 /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				96A8CB5C2BA6A4D1002FDF72 /* PlayScript.g4 */,
+				96A8CB5D2BA6A4D1002FDF72 /* CommonLexer.g4 */,
+			);
+			name = Grammar;
+			path = SimpleScripter/Grammar;
+			sourceTree = "<group>";
+		};
+		96A8CB5E2BA6A4D1002FDF72 /* CompilerInSwift */ = {
+			isa = PBXGroup;
+			children = (
+				96A8CB5F2BA6A4D1002FDF72 /* PlayScript.interp */,
+				96A8CB602BA6A4D1002FDF72 /* PlayScriptListener.swift */,
+				96A8CB612BA6A4D1002FDF72 /* PlayScriptLexer.interp */,
+				96A8CB622BA6A4D1002FDF72 /* PlayScriptBaseListener.swift */,
+				96A8CB632BA6A4D1002FDF72 /* PlayScriptParser.swift */,
+				96A8CB642BA6A4D1002FDF72 /* PlayScriptLexer.tokens */,
+				96A8CB652BA6A4D1002FDF72 /* PlayScript.tokens */,
+				96A8CB662BA6A4D1002FDF72 /* PlayScriptLexer.swift */,
+				96A8CB672BA6A4D1002FDF72 /* PlayScriptBaseVisitor.swift */,
+				96A8CB682BA6A4D1002FDF72 /* PlayScriptVisitor.swift */,
+			);
+			name = CompilerInSwift;
+			path = SimpleScripter/CompilerInSwift;
+			sourceTree = "<group>";
+		};
 		96B1E95D2BA5BF9C007DD5EB = {
 			isa = PBXGroup;
 			children = (
+				96A8CB5E2BA6A4D1002FDF72 /* CompilerInSwift */,
+				96A8CB5B2BA6A4D1002FDF72 /* Grammar */,
 				96B1E9682BA5BF9C007DD5EB /* SimpleScripter */,
 				96B1E9672BA5BF9C007DD5EB /* Products */,
 				967721F42BA5EE8B00282554 /* Frameworks */,
@@ -96,40 +131,11 @@
 		96B1E9682BA5BF9C007DD5EB /* SimpleScripter */ = {
 			isa = PBXGroup;
 			children = (
-				96B1E9752BA5D07B007DD5EB /* CompilerInSwift */,
-				96B1E9722BA5D001007DD5EB /* Grammar */,
 				96B1E9692BA5BF9C007DD5EB /* main.swift */,
 				967721EF2BA5EAFE00282554 /* SimpleScriptCompiler.swift */,
 				967721F22BA5EBFE00282554 /* StringExt.swift */,
 			);
 			path = SimpleScripter;
-			sourceTree = "<group>";
-		};
-		96B1E9722BA5D001007DD5EB /* Grammar */ = {
-			isa = PBXGroup;
-			children = (
-				96B1E9742BA5D028007DD5EB /* PlayScript.g4 */,
-				96B1E9732BA5D01B007DD5EB /* CommonLexer.g4 */,
-			);
-			path = Grammar;
-			sourceTree = "<group>";
-		};
-		96B1E9752BA5D07B007DD5EB /* CompilerInSwift */ = {
-			isa = PBXGroup;
-			children = (
-				96B1E9762BA5D07B007DD5EB /* PlayScript.interp */,
-				96B1E9772BA5D07B007DD5EB /* PlayScriptListener.swift */,
-				96B1E9782BA5D07B007DD5EB /* PlayScriptLexer.interp */,
-				96B1E9792BA5D07B007DD5EB /* PlayScriptBaseListener.swift */,
-				96B1E97A2BA5D07B007DD5EB /* PlayScriptParser.swift */,
-				96B1E97B2BA5D07B007DD5EB /* PlayScriptLexer.tokens */,
-				96B1E97C2BA5D07B007DD5EB /* PlayScript.tokens */,
-				96B1E97D2BA5D07B007DD5EB /* PlayScriptLexer.swift */,
-				96B1E97E2BA5D07B007DD5EB /* PlayScriptBaseVisitor.swift */,
-				96B1E97F2BA5D07B007DD5EB /* PlayScriptVisitor.swift */,
-			);
-			name = CompilerInSwift;
-			path = ../../AntlrScript/CompilerInSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A8CB572BA697AC002FDF72 /* PlayScriptLexer.swift in Sources */,
+				96A8CB692BA6A4D1002FDF72 /* PlayScriptListener.swift in Sources */,
 				96B1E96A2BA5BF9C007DD5EB /* main.swift in Sources */,
 				967721F32BA5EBFE00282554 /* StringExt.swift in Sources */,
+				96A8CB6B2BA6A4D1002FDF72 /* PlayScriptParser.swift in Sources */,
+				96A8CB6D2BA6A4D1002FDF72 /* PlayScriptBaseVisitor.swift in Sources */,
+				96A8CB6E2BA6A4D1002FDF72 /* PlayScriptVisitor.swift in Sources */,
+				96A8CB6C2BA6A4D1002FDF72 /* PlayScriptLexer.swift in Sources */,
+				96A8CB6A2BA6A4D1002FDF72 /* PlayScriptBaseListener.swift in Sources */,
 				967721F02BA5EAFE00282554 /* SimpleScriptCompiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

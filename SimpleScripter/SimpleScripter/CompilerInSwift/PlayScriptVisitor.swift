@@ -1,6 +1,5 @@
 // Generated from PlayScript.g4 by ANTLR 4.13.1
 
-package play;
 
 import Antlr4
 
