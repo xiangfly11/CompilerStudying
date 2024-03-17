@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		967721F02BA5EAFE00282554 /* SimpleScriptCompiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967721EF2BA5EAFE00282554 /* SimpleScriptCompiler.swift */; };
+		967721F32BA5EBFE00282554 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967721F22BA5EBFE00282554 /* StringExt.swift */; };
+		96A8CB562BA69786002FDF72 /* Antlr4 in Frameworks */ = {isa = PBXBuildFile; productRef = 96A8CB552BA69786002FDF72 /* Antlr4 */; };
+		96A8CB572BA697AC002FDF72 /* PlayScriptLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1E97D2BA5D07B007DD5EB /* PlayScriptLexer.swift */; };
+		96A8CB5A2BA6A355002FDF72 /* Antlr4 in Frameworks */ = {isa = PBXBuildFile; productRef = 96A8CB592BA6A355002FDF72 /* Antlr4 */; };
+		96B1E96A2BA5BF9C007DD5EB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1E9692BA5BF9C007DD5EB /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		967721F82BA5EE8B00282554 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B1E9642BA5BF9C007DD5EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		967721EF2BA5EAFE00282554 /* SimpleScriptCompiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleScriptCompiler.swift; sourceTree = "<group>"; };
+		967721F22BA5EBFE00282554 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		96B1E9662BA5BF9C007DD5EB /* SimpleScripter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleScripter; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B1E9692BA5BF9C007DD5EB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		96B1E9732BA5D01B007DD5EB /* CommonLexer.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; name = CommonLexer.g4; path = ../../../AntlrScript/CommonLexer.g4; sourceTree = "<group>"; };
+		96B1E9742BA5D028007DD5EB /* PlayScript.g4 */ = {isa = PBXFileReference; lastKnownFileType = text; name = PlayScript.g4; path = ../../../AntlrScript/PlayScript.g4; sourceTree = "<group>"; };
+		96B1E9762BA5D07B007DD5EB /* PlayScript.interp */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScript.interp; sourceTree = "<group>"; };
+		96B1E9772BA5D07B007DD5EB /* PlayScriptListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptListener.swift; sourceTree = "<group>"; };
+		96B1E9782BA5D07B007DD5EB /* PlayScriptLexer.interp */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScriptLexer.interp; sourceTree = "<group>"; };
+		96B1E9792BA5D07B007DD5EB /* PlayScriptBaseListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptBaseListener.swift; sourceTree = "<group>"; };
+		96B1E97A2BA5D07B007DD5EB /* PlayScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptParser.swift; sourceTree = "<group>"; };
+		96B1E97B2BA5D07B007DD5EB /* PlayScriptLexer.tokens */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScriptLexer.tokens; sourceTree = "<group>"; };
+		96B1E97C2BA5D07B007DD5EB /* PlayScript.tokens */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlayScript.tokens; sourceTree = "<group>"; };
+		96B1E97D2BA5D07B007DD5EB /* PlayScriptLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptLexer.swift; sourceTree = "<group>"; };
+		96B1E97E2BA5D07B007DD5EB /* PlayScriptBaseVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptBaseVisitor.swift; sourceTree = "<group>"; };
+		96B1E97F2BA5D07B007DD5EB /* PlayScriptVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayScriptVisitor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96B1E9632BA5BF9C007DD5EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A8CB562BA69786002FDF72 /* Antlr4 in Frameworks */,
+				96A8CB5A2BA6A355002FDF72 /* Antlr4 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		967721F42BA5EE8B00282554 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96B1E95D2BA5BF9C007DD5EB = {
+			isa = PBXGroup;
+			children = (
+				96B1E9682BA5BF9C007DD5EB /* SimpleScripter */,
+				96B1E9672BA5BF9C007DD5EB /* Products */,
+				967721F42BA5EE8B00282554 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		96B1E9672BA5BF9C007DD5EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96B1E9662BA5BF9C007DD5EB /* SimpleScripter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96B1E9682BA5BF9C007DD5EB /* SimpleScripter */ = {
+			isa = PBXGroup;
+			children = (
+				96B1E9752BA5D07B007DD5EB /* CompilerInSwift */,
+				96B1E9722BA5D001007DD5EB /* Grammar */,
+				96B1E9692BA5BF9C007DD5EB /* main.swift */,
+				967721EF2BA5EAFE00282554 /* SimpleScriptCompiler.swift */,
+				967721F22BA5EBFE00282554 /* StringExt.swift */,
+			);
+			path = SimpleScripter;
+			sourceTree = "<group>";
+		};
+		96B1E9722BA5D001007DD5EB /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				96B1E9742BA5D028007DD5EB /* PlayScript.g4 */,
+				96B1E9732BA5D01B007DD5EB /* CommonLexer.g4 */,
+			);
+			path = Grammar;
+			sourceTree = "<group>";
+		};
+		96B1E9752BA5D07B007DD5EB /* CompilerInSwift */ = {
+			isa = PBXGroup;
+			children = (
+				96B1E9762BA5D07B007DD5EB /* PlayScript.interp */,
+				96B1E9772BA5D07B007DD5EB /* PlayScriptListener.swift */,
+				96B1E9782BA5D07B007DD5EB /* PlayScriptLexer.interp */,
+				96B1E9792BA5D07B007DD5EB /* PlayScriptBaseListener.swift */,
+				96B1E97A2BA5D07B007DD5EB /* PlayScriptParser.swift */,
+				96B1E97B2BA5D07B007DD5EB /* PlayScriptLexer.tokens */,
+				96B1E97C2BA5D07B007DD5EB /* PlayScript.tokens */,
+				96B1E97D2BA5D07B007DD5EB /* PlayScriptLexer.swift */,
+				96B1E97E2BA5D07B007DD5EB /* PlayScriptBaseVisitor.swift */,
+				96B1E97F2BA5D07B007DD5EB /* PlayScriptVisitor.swift */,
+			);
+			name = CompilerInSwift;
+			path = ../../AntlrScript/CompilerInSwift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96B1E9652BA5BF9C007DD5EB /* SimpleScripter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B1E96D2BA5BF9C007DD5EB /* Build configuration list for PBXNativeTarget "SimpleScripter" */;
+			buildPhases = (
+				96B1E9622BA5BF9C007DD5EB /* Sources */,
+				96B1E9632BA5BF9C007DD5EB /* Frameworks */,
+				96B1E9642BA5BF9C007DD5EB /* CopyFiles */,
+				967721F82BA5EE8B00282554 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleScripter;
+			packageProductDependencies = (
+				96A8CB552BA69786002FDF72 /* Antlr4 */,
+				96A8CB592BA6A355002FDF72 /* Antlr4 */,
+			);
+			productName = SimpleScripter;
+			productReference = 96B1E9662BA5BF9C007DD5EB /* SimpleScripter */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96B1E95E2BA5BF9C007DD5EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					96B1E9652BA5BF9C007DD5EB = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 96B1E9612BA5BF9C007DD5EB /* Build configuration list for PBXProject "SimpleScripter" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96B1E95D2BA5BF9C007DD5EB;
+			packageReferences = (
+				96A8CB582BA6A355002FDF72 /* XCLocalSwiftPackageReference "antlr4-4.13.1" */,
+			);
+			productRefGroup = 96B1E9672BA5BF9C007DD5EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96B1E9652BA5BF9C007DD5EB /* SimpleScripter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96B1E9622BA5BF9C007DD5EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A8CB572BA697AC002FDF72 /* PlayScriptLexer.swift in Sources */,
+				96B1E96A2BA5BF9C007DD5EB /* main.swift in Sources */,
+				967721F32BA5EBFE00282554 /* StringExt.swift in Sources */,
+				967721F02BA5EAFE00282554 /* SimpleScriptCompiler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		96B1E96B2BA5BF9C007DD5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96B1E96C2BA5BF9C007DD5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		96B1E96E2BA5BF9C007DD5EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 679CMUJHT5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		96B1E96F2BA5BF9C007DD5EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 679CMUJHT5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96B1E9612BA5BF9C007DD5EB /* Build configuration list for PBXProject "SimpleScripter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B1E96B2BA5BF9C007DD5EB /* Debug */,
+				96B1E96C2BA5BF9C007DD5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B1E96D2BA5BF9C007DD5EB /* Build configuration list for PBXNativeTarget "SimpleScripter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B1E96E2BA5BF9C007DD5EB /* Debug */,
+				96B1E96F2BA5BF9C007DD5EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		96A8CB582BA6A355002FDF72 /* XCLocalSwiftPackageReference "antlr4-4.13.1" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "antlr4-4.13.1";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96A8CB552BA69786002FDF72 /* Antlr4 */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Antlr4;
+		};
+		96A8CB592BA6A355002FDF72 /* Antlr4 */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Antlr4;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 96B1E95E2BA5BF9C007DD5EB /* Project object */;
+}
